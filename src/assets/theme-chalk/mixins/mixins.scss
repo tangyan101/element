@@ -1,25 +1,27 @@
 @import './config.scss';
+@import '../common/var.scss';
 
 /*BEM css风格规范*/
 
-@mixin b($block){
-  $B: $namespace + '-' + $block;
-  @at-root{
+@mixin b($block) {
+  $B: $namespace + '-'+ $block;
+
+  @at-root {
     .#{$B} {
       @content;
     }
   }
 }
 
-@mixin m($modifier){
-  $selector: &;
+@mixin m($modifier) {
   $currentSelector: '';
 
   @each $unit in $modifier {
-    $currentSelector: $currentSelector + $selector + $modifier-separator + $unit + ',';
+    $currentSelector: $currentSelector + & + $modifier-separator + $unit + ',';
   }
-  @at-root{
-    #{$currentSelector}{
+
+  @at-root {
+    #{$currentSelector} {
       @content;
     }
   }
@@ -32,3 +34,16 @@
     }
   }
 }
+
+/* 断点 */
+@mixin res($key, $map: $--breakpoints) {
+  @if map-has-key($map, $key) {
+    @media only screen and #{inspect(map-get($map, $key))} {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "undefined points #{$map}"
+  }
+};
