@@ -1,70 +1,18 @@
 <template>
   <div>
     <el-container direction="vertical">
-      <el-header>Header</el-header>
-      <el-main>Main</el-main>
+      <el-header>
+        <i class="el-icon-edit"></i>
+        <i class="el-icon-check"></i>
+        <el-icon name="umbrella"></el-icon>
+        <el-icon name="delete"></el-icon>
+        <el-icon name="s-tools"></el-icon>
+        <el-icon name="star-off"></el-icon>
+      </el-header>
+      <el-main>
+        <el-icon name="loading" style="font-size: 30px"></el-icon>
+      </el-main>
     </el-container>
-    <br />
-    <hr />
-    <el-container>
-      <el-header>Header</el-header>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
-    </el-container>
-      <br>
-    <hr>
-    <br>
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-main>Main</el-main>
-    </el-container>
-    <br>
-    <hr>
-    <br>
-      <el-container>
-      <el-header>Header</el-header>
-      <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
-      </el-container>
-    </el-container>
-    <br>
-    <hr>
-    <br>
-    <el-container>
-      <el-header>Header</el-header>
-      <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-container>
-          <el-main>Main</el-main>
-          <el-footer>Footer</el-footer>
-        </el-container>
-      </el-container>
-    </el-container>
-    <br>
-    <hr>
-    <br>
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-container>
-        <el-header>Header</el-header>
-        <el-main>Main</el-main>
-      </el-container>
-    </el-container>
-    <br>
-    <hr>
-    <br>
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-container>
-        <el-header>Header</el-header>
-        <el-main>Main</el-main>
-        <el-footer>Footer</el-footer>
-      </el-container>
-    </el-container>
-    <br>
-    <hr>
-    <br>
   </div>
 </template>
 
