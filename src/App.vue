@@ -1,18 +1,6 @@
 <template>
   <div>
-    <el-container direction="vertical">
-      <el-header>
-        <i class="el-icon-edit"></i>
-        <i class="el-icon-check"></i>
-        <el-icon name="umbrella"></el-icon>
-        <el-icon name="delete"></el-icon>
-        <el-icon name="s-tools"></el-icon>
-        <el-icon name="star-off"></el-icon>
-      </el-header>
-      <el-main>
-        <el-icon name="loading" style="font-size: 30px"></el-icon>
-      </el-main>
-    </el-container>
+    <el-button>按钮</el-button>
   </div>
 </template>
 

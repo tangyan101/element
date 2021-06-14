@@ -6,6 +6,7 @@ import Aside from '@element/aside';
 import Main from '@element/main';
 import Footer from '@element/footer';
 import Icon from '@element/icon';
+import Button from '@element/button';
 
 const components = [
   Row,
@@ -16,6 +17,7 @@ const components = [
   Main,
   Footer,
   Icon,
+  Button,
 ];
 
 const install = (_vue) => {
@@ -34,6 +36,7 @@ export default {
   Main,
   Footer,
   Icon,
+  Button,
 };
 
 export {
@@ -45,4 +48,5 @@ export {
   Aside,
   Main,
   Footer,
+  Button,
 };
