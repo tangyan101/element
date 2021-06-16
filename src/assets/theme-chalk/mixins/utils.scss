@@ -1,13 +1,23 @@
-@mixin utils-clearfix{
+@mixin utils-clearfix {
   $selector: &;
-  @at-root{
+
+  @at-root {
+
     #{$selector}::after,
-    #{$selector}::before{
+    #{$selector}::before {
       content: '';
       display: block;
     }
-    #{$selector}::after{
+
+    #{$selector}::after {
       clear: both;
     }
   }
+}
+
+@mixin utils-user-select($val) {
+  user-select        : $val;
+  -moz-user-select   : $val;
+  -webkit-user-select: $val;
+  -ms-user-select    : $val;
 }
