@@ -32,13 +32,7 @@
     margin-left: 10px;
   }
 
-  &:hover {
-    color           : $--color-primary;
-    border-color    : $--color-primary-light-7;
-    background-color: $--color-primary-light-9;
-  }
-
-  &:focus {
+  &:hover, &:focus {
     color           : $--color-primary;
     border-color    : $--color-primary-light-7;
     background-color: $--color-primary-light-9;
@@ -48,6 +42,19 @@
     color       : mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     outline     : none;
+  }
+
+  //朴素按钮基本默认样式 
+  @include when(plain){
+    &:hover, &:focus {
+      background-color: $--color-white;
+      border-color: $--color-primary;
+      color: $--color-primary;
+    }
+    &:active{
+      border-color: mix($--color-black, $--color-primary, 10%);
+      color:  mix($--color-black, $--color-primary, 10%);
+    }
   }
 
   @include m(primary) {
