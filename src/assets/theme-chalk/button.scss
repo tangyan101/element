@@ -3,6 +3,7 @@
 @import './mixins/utils.scss';
 @import './mixins/_button';
 
+// el-button
 @include b(button) {
   display    : inline-block;
   line-height: 1;
@@ -32,7 +33,8 @@
     margin-left: 10px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color           : $--color-primary;
     border-color    : $--color-primary-light-7;
     background-color: $--color-primary-light-9;
@@ -45,25 +47,54 @@
   }
 
   //朴素按钮基本默认样式 
-  @include when(plain){
-    &:hover, &:focus {
+  @include when(plain) {
+
+    &:hover,
+    &:focus {
       background-color: $--color-white;
-      border-color: $--color-primary;
-      color: $--color-primary;
+      border-color    : $--color-primary;
+      color           : $--color-primary;
     }
-    &:active{
+
+    &:active {
       border-color: mix($--color-black, $--color-primary, 10%);
-      color:  mix($--color-black, $--color-primary, 10%);
+      color       : mix($--color-black, $--color-primary, 10%);
     }
   }
 
+  // 圆角按钮
+  @include when(round) {
+    border-radius: 20px;
+    padding      : 12px 23px;
+  }
+
+  // 圆形按钮
+  @include when(circle) {
+    border-radius: 50%;
+    padding      : $--button-padding-vertical;
+  }
+
+  // 禁用按钮
+  @include when(disabled) {
+
+    &,
+    &.is-plain {
+      cursor          : not-allowed;
+      background-color: $--button-disabled-background-color;
+      border-color    : $--button-disabled-border-color;
+      color           : $--button-disabled-font-colo;
+    }
+  }
+
+
+  // el-button--primary
   @include m(primary) {
     @include button-variant($--button-primary-background-color, $--button-primary-border-color, $--button-primary-font-color);
   }
 
-
+  // el-button--success
   @include m(success) {
-    @include button-variant($--button-success-background-color,$--button-success-border-color, $--button-success-font-color);
+    @include button-variant($--button-success-background-color, $--button-success-border-color, $--button-success-font-color);
   }
 
   @include m(info) {

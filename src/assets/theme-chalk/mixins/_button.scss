@@ -1,14 +1,15 @@
 @import '../common/var.scss';
 
-@mixin button-variant($backgroundColor, $border-color, $font-color){
+@mixin button-variant($backgroundColor, $border-color, $font-color) {
   background-color: $backgroundColor;
   border-color    : $border-color;
   color           : $font-color;
 
-  &:hover, &:focus {
-    background: mix($--color-white, $backgroundColor, $--button-hover-tint-percent);
+  &:hover,
+  &:focus {
+    background  : mix($--color-white, $backgroundColor, $--button-hover-tint-percent);
     border-color: mix($--color-white, $backgroundColor, $--button-hover-tint-percent);
-    color: $font-color;
+    color       : $font-color;
   }
 
 
@@ -21,24 +22,38 @@
   // 朴素按钮样式
   &.is-plain {
     @include button-plain($backgroundColor);
+  }
 
-   
+  // 禁用按钮样式
+  &.is-disabled {
+    background-color: mix($--color-white, $backgroundColor);
+    border-color    : mix($--color-white, $backgroundColor);
+    color           : $--color-white;
   }
 }
 
 // 朴素按钮混合样式
 @mixin button-plain($color) {
   background-color: mix($--color-white, $color, 90%);
-  border-color: mix($--color-white, $color, 60%);
-  color: $color;
-  &:hover, &:focus{
+  border-color    : mix($--color-white, $color, 60%);
+  color           : $color;
+
+  &:hover,
+  &:focus {
     background-color: $color;
-    border-color: $color;
-    color: $--color-white;
+    border-color    : $color;
+    color           : $--color-white;
   }
-  &:active{
-    background-color: mix($--color-black,$color, $weight: $--button-active-shade-percent);
-    border-color: mix($--color-black,$color, $weight: $--button-active-shade-percent);
-    color: $--color-white;
+
+  &:active {
+    background-color: mix($--color-black, $color, $weight: $--button-active-shade-percent);
+    border-color    : mix($--color-black, $color, $weight: $--button-active-shade-percent);
+    color           : $--color-white;
+  }
+
+  &.is-disabled {
+    background-color: mix($--color-white, $color, 90%);
+    border-color    : mix($--color-white, $color, 80%);
+    color           : mix($--color-white, $color, 40%);
   }
 }

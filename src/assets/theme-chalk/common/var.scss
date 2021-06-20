@@ -51,7 +51,7 @@ $--font-size-medium     : 16px !default; // 小标题
 $--font-size-base       : 14px !default; // 正文
 $--font-size-small      : 13px !default; // 正文（小）
 $--font-size-extra-small: 12px !default; // 正文（小）
-$--font-weight-primary : 500 !default; // 字体加粗
+$--font-weight-primary  : 500 !default; // 字体加粗
 
 /* Border */
 $--border-width-base  : 1px !default;
@@ -91,16 +91,18 @@ $--button-danger-border-color    : $--color-danger !default; // #f56c6c
 $--button-danger-font-color      : $--color-white !default; // #fff
 
 
-$--button-font-weight: $--font-weight-primary !default;
-$--button-font-font-size: $--font-size-base !default;
-$--button-border-radius: $--border-radius-base !default;
-$--button-padding-vertical: 12px !default;
+$--button-font-weight       : $--font-weight-primary !default;
+$--button-font-font-size    : $--font-size-base !default;
+$--button-border-radius     : $--border-radius-base !default;
+$--button-padding-vertical  : 12px !default;
 $--button-padding-horizontal:20px !default;
 
-$--button-active-shade-percent: 10% !default;
+$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-border-color    : $--border-color-lighter !default; //#ebeef5
+$--button-disabled-font-colo       : $--color-text-placeholder !default; //#c0c4cc
 
-$--button-hover-tint-percent: 20% !default;
-$--button-focus-tint-percent: 20% !default;
+$--button-active-shade-percent: 10% !default;
+$--button-hover-tint-percent  : 20% !default;
 
 /* Break Point */
 $--sm: 768px !default;
