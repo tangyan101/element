@@ -1,18 +1,28 @@
-@import './common/var.scss';
+@charset "UTF-8";
+/* Header */
+/* Footer */
+/* Main */
+/* 主颜色Color */
+/* 辅助色  complementary colors */
+/* 中性色 middle colors*/
+/* Typography */
+/* Border */
+/* Button */
+/* Break Point */
 @font-face {
   font-family: 'element-icons';
-  src: url('#{$--font-path}/element-icons.ttf') format('truetype'),
-      url('#{$--font-path}/element-icons.woff') format('woff');
+  src: url("fonts/element-icons.ttf") format("truetype"), url("fonts/element-icons.woff") format("woff");
 }
 
 .el-icon--right {
   margin-left: 5px;
 }
-.el-icon--left{
+
+.el-icon--left {
   margin-right: 5px;
 }
 
-[class^="el-icon-"],[class*="el-icon-"] {
+[class^="el-icon-"], [class*="el-icon-"] {
   font-family: 'element-icons';
   display: inline-block;
   font-style: normal;

@@ -21,11 +21,13 @@
   margin    : 0;
 
   font-weight  : $--button-font-weight;
-  font-size    : $--button-font-font-size;
-  border-radius: $--button-border-radius;
-  padding      : $--button-padding-vertical $--button-padding-horizontal;
+  // font-size    : $--button-font-size;
+  // border-radius: $--button-border-radius;
+  // padding      : $--button-padding-vertical $--button-padding-horizontal;
 
   transition: .1s;
+
+  @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
   // 设置不能被选中
   @include utils-user-select(none);
 
@@ -44,6 +46,13 @@
     color       : mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     outline     : none;
+  }
+
+  // 选中按钮中icon同级的span
+  [class ^= el-icon-] {
+    & + span {
+      margin-left: 5px;
+    }
   }
 
   //朴素按钮基本默认样式 
@@ -86,6 +95,11 @@
     }
   }
 
+  // is-loading
+  @include when(loading){
+    pointer-events: none;
+  }
+
 
   // el-button--primary
   @include m(primary) {
@@ -108,4 +122,45 @@
   @include m(danger) {
     @include button-variant($--button-danger-background-color, $--button-danger-border-color, $--button-danger-font-color);
   }
+
+  // 文字按钮 el-button--text
+  @include m(text) {
+    background-color: transparent;
+    border-color    : transparent;
+    color           : $--color-primary;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color    : transparent;
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);;
+    }
+
+    &:active {
+      color       : mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover {
+      background-color: transparent;
+      border-color    : transparent;
+      color           : #c0c4cc;
+    }
+  }
+
+  // el-button--medium
+  @include m(medium) {
+    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+  }
+  // el-button--small
+  @include m(small) {
+    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-medium-font-size, $--button-small-border-radius);
+  }
+  // el-button--mini
+  @include m(mini) {
+    @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-medium-font-size, $--button-mini-border-radius);
+  }
+
 }

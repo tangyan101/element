@@ -2,16 +2,21 @@
   <button class="el-button"
     :class="[
       type ? `el-button--${type}` : 'el-button--default',
+      size ? `el-button--${size}` : '',
       {
         'is-plain': plain,
         'is-round': round,
         'is-circle': circle,
         'is-disabled': disabled,
+        'is-loading': loading,
       }
     ]"
   >
-    <i :class="icon"></i>
-    <slot></slot>
+    <i class="el-icon-loading" v-if="loading"></i>
+    <i :class="icon" v-if="icon && !loading"></i>
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
   </button>
 </template>
 
@@ -25,6 +30,8 @@ export default {
     circle: Boolean,
     icon: String,
     disabled: Boolean,
+    loading: Boolean,
+    size: String,
   },
 };
 </script>
