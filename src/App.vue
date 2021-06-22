@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #96ff4f3b">
+  <div>
     <!-- <el-row>
       <el-button>默认按钮</el-button>
       <el-button type="primary">主要按钮</el-button>
@@ -54,7 +54,7 @@
       <el-button type="danger" plain disabled>危险按钮</el-button>
     </el-row> -->
 
-    <el-button type="text">文字按钮</el-button>
+    <!-- <el-button type="text">文字按钮</el-button>
     <el-button type="text" disabled>文字按钮</el-button>
 
     <h3>图标按钮</h3>
@@ -84,7 +84,26 @@
       <el-button type="success" icon="el-icon-check" circle size="medium"></el-button>
       <el-button type="info" icon="el-icon-message" circle size="small"></el-button>
       <el-button type="warning" icon="el-icon-star-off" circle size="mini"></el-button>
-    </el-row>
+    </el-row> -->
+
+    <el-button-group>
+      <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+      <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+    </el-button-group>
+    <el-button-group>
+      <el-button type="primary" icon="el-icon-edit"></el-button>
+      <el-button type="primary" icon="el-icon-share"></el-button>
+      <el-button type="primary" icon="el-icon-delete"></el-button>
+    </el-button-group>
+    <el-button-group>
+      <el-button type="primary" icon="el-icon-edit"></el-button>
+    </el-button-group>
+    <el-button-group>
+      <el-button type="primary" round icon="el-icon-edit">round</el-button>
+    </el-button-group>
+    <el-button-group>
+      <el-button type="primary" circle icon="el-icon-edit"></el-button>
+    </el-button-group>
   </div>
 </template>
 
@@ -96,8 +115,7 @@ export default {
 </script>
 
 <style>
-.el-row {
-  margin-bottom: 20px;
-  margin-top: 20px;
+.el-button-group{
+  margin-right: 10px;
 }
 </style>

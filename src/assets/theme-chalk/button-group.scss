@@ -1,0 +1,57 @@
+@import './mixins/mixins.scss';
+
+@include b(button-group) {
+  display: inline-block;
+
+  .el-button {
+    margin-left: 0;
+
+    &:first-child {
+      // 第一个元素边框圆角
+      border-top-right-radius   : 0;
+      border-bottom-right-radius: 0;
+      // 第一个元素边框色
+      border-right-color        : rgba($--color-white, .5);
+    }
+
+    &:last-child {
+      // 最后一个元素边框圆角
+      border-top-left-radius   : 0;
+      border-bottom-left-radius: 0;
+      // 最后一个元素边框色
+      border-left-color        : rgba($--color-white, .5);
+    }
+
+    &:not(:first-child):not(:last-child) {
+      // 中间的按钮取消边框圆角
+      border-radius     : 0;
+      // 中间按钮边框色
+      border-left-color : rgba($--color-white, .5);
+      border-right-color: rgba($--color-white, .5);
+    }
+
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    // 只有一个按钮的情况
+    &:first-child:last-child {
+      border:0;
+      border-radius: $--button-border-radius;
+
+      // 圆角按钮时需要处理
+      &.is-round {
+        border:0;
+        border-radius: 20px;
+      }
+      // 圆形按钮时需要处理
+      &.is-circle{
+        border:0;
+        border-radius: 50%;
+      }
+    }
+
+
+
+  }
+}
