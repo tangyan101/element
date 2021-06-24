@@ -119,6 +119,18 @@ $--button-disabled-font-colo       : $--color-text-placeholder !default; //#c0c4
 $--button-active-shade-percent: 10% !default;
 $--button-hover-tint-percent  : 20% !default;
 
+/** Link
+-----------------------------*/
+$--link-font-size: $--font-size-base !default; // 14px
+$--link-font-weight: $--font-weight-primary !default; // 500
+$--link-default-font-color: $--color-text-regular !default; // #606266
+$--link-active-font-color: $--color-primary !default; // #409eff,
+$--link-primary-font-color: $--color-primary !default; // #409eff,
+$--link-success-font-color: $--color-success !default; //#67c23a
+$--link-warning-font-color: $--color-warning !default; // #e6a23c
+$--link-danger-font-color: $--color-danger  !default; // #f56c6c
+$--link-info-font-color: $--color-info !default; // #909399
+
 /* Break Point */
 $--sm: 768px !default;
 $--md: 992px !default;

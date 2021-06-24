@@ -8,6 +8,7 @@ import Footer from '@element/footer';
 import Icon from '@element/icon';
 import Button from '@element/button';
 import ButtonGroup from '@element/button-group';
+import Link from '@element/link';
 
 const components = [
   Row,
@@ -20,6 +21,7 @@ const components = [
   Icon,
   Button,
   ButtonGroup,
+  Link,
 ];
 
 const install = (_vue) => {
@@ -40,6 +42,7 @@ export default {
   Icon,
   Button,
   ButtonGroup,
+  Link,
 };
 
 export {
@@ -53,4 +56,5 @@ export {
   Footer,
   Button,
   ButtonGroup,
+  Link,
 };
